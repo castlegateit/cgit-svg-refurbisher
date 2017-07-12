@@ -1,6 +1,6 @@
 <?php
 
-namespace Cgit\Refurbisher;
+namespace Cgit;
 
 class Refurbisher
 {
@@ -23,8 +23,8 @@ class Refurbisher
 
         $index = str_replace('.svg', count($this->svg_index), pathinfo($path)['basename']);
 
+        // If we're reloading an SVG we've already loaded, check and use the same ID on it.
         if (count($this->svg_index) && $duplicate = array_search($index, $this->svg_index)) {
-            // We're only good up to 500 duplicate file
             $index = $duplicate;
             unset($duplicate);
         }
