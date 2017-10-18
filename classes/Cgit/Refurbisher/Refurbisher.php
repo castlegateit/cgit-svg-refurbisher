@@ -1,6 +1,6 @@
 <?php
 
-namespace Cgit;
+namespace Cgit\Refurbisher;
 
 class Refurbisher
 {
